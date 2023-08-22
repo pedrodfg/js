@@ -1,0 +1,65 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Curriculum</title>
+    <style>
+      a{
+        color: black;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgba(18, 12, 59, 0.788); color: rgb(245, 226, 226);">
+    <img src="foto.png" width="100" style="border-radius: 50%;"/>
+    <h1 id="person-name" class="text">Seu Nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p class="text">
+      Conhecimento em programação Frontend, Backend para desenvolvimento de
+      sistemas Fullstack.
+    </p>
+    <p>
+      Para mais detalhes, por favor, visite meu
+      <a href="https://github.com/felipefontoura" target="_blank">Github</a> ou
+      <a href="https://devsamurai.com.br">Portfólio</a>.
+    </p>
+    <script>
+      // Alterando um objeto do DOM
+      // Ref.: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+
+      const nome = document.querySelector("#person-name")
+      nome.innerHTML = "Pedro Gonzalez"
+      console.log(nome)
+
+      const site = document.querySelector('a[href="https://github.com/felipefontoura"]')
+      site.href = "https://github.com/pedrodfg"
+
+      const foto = document.querySelector('img[src="foto.png"]')
+      foto.src = "pedro.jpg"
+
+      const subTi = document.createElement("h2")
+      subTi.innerHTML = "Projetos"
+      document.body.append(subTi)
+
+      const projetos = document.createElement("ul")
+      
+      const projetosItems = document.createElement("li")
+      projetosItems.innerHTML = "TODO list"
+      document.body.append(projetosItems)
+
+      const projetosItems2 = document.createElement("li")
+      projetosItems2.innerHTML = "Github API"
+      document.body.append(projetosItems2)
+
+      const projetosItems3 = document.createElement("li")
+      projetosItems3.innerHTML = "eCommerce"
+      document.body.append(projetosItems3)
+
+      projetos.append(projetosItems)
+      projetos.append(projetosItems2)
+      projetos.append(projetosItems3)
+
+      document.body.append(projetos)
+      
+    </script>
+  </body>
+</html>
